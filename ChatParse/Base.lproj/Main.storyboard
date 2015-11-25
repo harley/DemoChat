@@ -70,11 +70,57 @@
                         <outlet property="loginButton" destination="vx6-bn-1jF" id="TVd-pi-8Pj"/>
                         <outlet property="passwordField" destination="zfD-2I-zHR" id="PhO-Hn-x5a"/>
                         <outlet property="signupButton" destination="RdR-Y8-ve2" id="qf2-vA-Klw"/>
+                        <segue destination="8nQ-9X-TyV" kind="modal" identifier="loggedInSegue" id="p6f-uQ-Vms"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="106" y="329"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="PbO-cw-kiW">
+            <objects>
+                <viewController id="8nQ-9X-TyV" customClass="ChatViewController" customModule="ChatParse" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a5m-ge-c7I"/>
+                        <viewControllerLayoutGuide type="bottom" id="hSM-ou-E4q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cYM-Zy-7tP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5K7-ch-KJI">
+                                <rect key="frame" x="8" y="28" width="304" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eib-iY-x2A">
+                                <rect key="frame" x="8" y="66" width="36" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="onSendButtonTapped:" destination="8nQ-9X-TyV" eventType="touchUpInside" id="oEy-xs-5rN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5K7-ch-KJI" firstAttribute="top" secondItem="a5m-ge-c7I" secondAttribute="bottom" constant="8" id="7oZ-EH-RUA"/>
+                            <constraint firstItem="5K7-ch-KJI" firstAttribute="leading" secondItem="cYM-Zy-7tP" secondAttribute="leading" constant="8" id="SAR-QJ-S83"/>
+                            <constraint firstItem="eib-iY-x2A" firstAttribute="top" secondItem="5K7-ch-KJI" secondAttribute="bottom" constant="8" id="VI2-da-0TQ"/>
+                            <constraint firstAttribute="trailing" secondItem="5K7-ch-KJI" secondAttribute="trailing" constant="8" id="eha-hE-EHx"/>
+                            <constraint firstItem="eib-iY-x2A" firstAttribute="leading" secondItem="cYM-Zy-7tP" secondAttribute="leading" constant="8" id="ygV-dB-hoy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="messageField" destination="5K7-ch-KJI" id="zbH-hv-QjS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eC8-E2-gxR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="488" y="329"/>
         </scene>
     </scenes>
 </document>
