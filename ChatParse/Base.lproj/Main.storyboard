@@ -1,25 +1,80 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="ChatParse" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VM7-oJ-WIK">
+                                <rect key="frame" x="60" y="120" width="200" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="A88-3H-vld"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zfD-2I-zHR">
+                                <rect key="frame" x="60" y="158" width="200" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="gcQ-7h-EYp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vx6-bn-1jF">
+                                <rect key="frame" x="60" y="196" width="38" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="onLoginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hCv-Dt-6ou"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RdR-Y8-ve2">
+                                <rect key="frame" x="208" y="196" width="52" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Sign up"/>
+                                <connections>
+                                    <action selector="onSignupTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jVw-Gw-R7F"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vx6-bn-1jF" firstAttribute="leading" secondItem="zfD-2I-zHR" secondAttribute="leading" id="0oq-Af-RUk"/>
+                            <constraint firstItem="VM7-oJ-WIK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="75j-q5-CwB"/>
+                            <constraint firstItem="zfD-2I-zHR" firstAttribute="top" secondItem="VM7-oJ-WIK" secondAttribute="bottom" constant="8" id="ALr-gV-2Ew"/>
+                            <constraint firstItem="RdR-Y8-ve2" firstAttribute="trailing" secondItem="zfD-2I-zHR" secondAttribute="trailing" id="EDc-4X-Ijn"/>
+                            <constraint firstItem="VM7-oJ-WIK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SQv-gs-01d"/>
+                            <constraint firstItem="zfD-2I-zHR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="atc-6k-vPb"/>
+                            <constraint firstItem="RdR-Y8-ve2" firstAttribute="top" secondItem="zfD-2I-zHR" secondAttribute="bottom" constant="8" id="jm2-nD-sR2"/>
+                            <constraint firstItem="vx6-bn-1jF" firstAttribute="top" secondItem="zfD-2I-zHR" secondAttribute="bottom" constant="8" id="slH-yb-yF5"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="VM7-oJ-WIK" id="wKc-DI-AWY"/>
+                        <outlet property="loginButton" destination="vx6-bn-1jF" id="TVd-pi-8Pj"/>
+                        <outlet property="passwordField" destination="zfD-2I-zHR" id="PhO-Hn-x5a"/>
+                        <outlet property="signupButton" destination="RdR-Y8-ve2" id="qf2-vA-Klw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="106" y="329"/>
         </scene>
     </scenes>
 </document>

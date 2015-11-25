@@ -12,6 +12,7 @@
 		E25AE73F1C05A554006F4701 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E25AE73D1C05A554006F4701 /* Main.storyboard */; };
 		E25AE7411C05A554006F4701 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E25AE7401C05A554006F4701 /* Assets.xcassets */; };
 		E25AE7441C05A554006F4701 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E25AE7421C05A554006F4701 /* LaunchScreen.storyboard */; };
+		E25AE74C1C05BB11006F4701 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25AE74B1C05BB11006F4701 /* LoginViewController.swift */; };
 		F5AC140C3B8C4DE3A72F7B9A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F719E18A963C83F7CB32241 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		E25AE7401C05A554006F4701 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E25AE7431C05A554006F4701 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E25AE7451C05A554006F4701 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E25AE74B1C05BB11006F4701 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				E25AE7401C05A554006F4701 /* Assets.xcassets */,
 				E25AE7421C05A554006F4701 /* LaunchScreen.storyboard */,
 				E25AE7451C05A554006F4701 /* Info.plist */,
+				E25AE74B1C05BB11006F4701 /* LoginViewController.swift */,
 			);
 			path = ChatParse;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E25AE74C1C05BB11006F4701 /* LoginViewController.swift in Sources */,
 				E25AE73C1C05A554006F4701 /* ViewController.swift in Sources */,
 				E25AE73A1C05A554006F4701 /* AppDelegate.swift in Sources */,
 			);
