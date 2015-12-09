@@ -17,10 +17,12 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = PFUser.currentUser()!.username
+
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 30
 
-        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "fetchMessages", userInfo: nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "fetchMessages", userInfo: nil, repeats: true)
     }
 
     func fetchMessages() {

@@ -80,7 +80,7 @@
         <!--Chat-->
         <scene sceneID="PbO-cw-kiW">
             <objects>
-                <viewController id="8nQ-9X-TyV" customClass="ChatViewController" customModule="ChatParse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chatViewController" id="8nQ-9X-TyV" customClass="ChatViewController" customModule="ChatParse" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="a5m-ge-c7I"/>
                         <viewControllerLayoutGuide type="bottom" id="hSM-ou-E4q"/>
@@ -112,7 +112,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rRa-mg-b5r" id="Fbi-c5-OQf">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="75.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a chat message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4j-c6-J3I">
@@ -126,7 +126,7 @@
                                                     <rect key="frame" x="292" y="8" width="20" height="18"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQT-az-37p">
@@ -199,7 +199,7 @@
         <!--Navigation Controller-->
         <scene sceneID="rMP-N8-w7w">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="u0X-9N-qUG" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="rootNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="u0X-9N-qUG" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GMn-Kh-CNH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
