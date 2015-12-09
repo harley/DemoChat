@@ -103,46 +103,58 @@
                                     <action selector="onSendButtonTapped:" destination="8nQ-9X-TyV" eventType="touchUpInside" id="up8-IP-7uK"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iky-Sd-FFK">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="76" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iky-Sd-FFK">
                                 <rect key="frame" x="0.0" y="66" width="320" height="502"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="messageCell" rowHeight="106" id="rRa-mg-b5r" customClass="MessageCell" customModule="ChatParse" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="106"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="252" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="messageCell" rowHeight="76" id="rRa-mg-b5r" customClass="MessageCell" customModule="ChatParse" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rRa-mg-b5r" id="Fbi-c5-OQf">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="105.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4j-c6-J3I">
-                                                    <rect key="frame" x="8" y="8" width="304" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a chat message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4j-c6-J3I">
+                                                    <rect key="frame" x="8" y="36" width="304" height="31"/>
                                                     <animations/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQT-az-37p">
-                                                    <rect key="frame" x="275" y="36" width="36.5" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="1m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nt1-Hu-5N7">
+                                                    <rect key="frame" x="292" y="8" width="20" height="18"/>
                                                     <animations/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQT-az-37p">
+                                                    <rect key="frame" x="8" y="8" width="80" height="20"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <animations/>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="IQT-az-37p" secondAttribute="trailing" constant="8" id="Wkg-pK-tGj"/>
-                                                <constraint firstAttribute="trailing" secondItem="y4j-c6-J3I" secondAttribute="trailing" constant="8" id="bhP-Jj-DPy"/>
+                                                <constraint firstAttribute="bottom" secondItem="y4j-c6-J3I" secondAttribute="bottom" constant="8" id="3eZ-k4-IKC"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Nt1-Hu-5N7" secondAttribute="bottom" constant="8" id="A9V-sV-3S6"/>
+                                                <constraint firstItem="Nt1-Hu-5N7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="IQT-az-37p" secondAttribute="trailing" constant="8" id="L9w-28-ab4"/>
+                                                <constraint firstAttribute="trailing" secondItem="Nt1-Hu-5N7" secondAttribute="trailing" constant="8" id="PJq-yc-Qsd"/>
+                                                <constraint firstItem="IQT-az-37p" firstAttribute="leading" secondItem="Fbi-c5-OQf" secondAttribute="leading" constant="8" id="QAu-qb-nQL"/>
+                                                <constraint firstItem="Nt1-Hu-5N7" firstAttribute="top" secondItem="Fbi-c5-OQf" secondAttribute="top" constant="8" id="TEh-Uv-GR4"/>
                                                 <constraint firstItem="y4j-c6-J3I" firstAttribute="leading" secondItem="Fbi-c5-OQf" secondAttribute="leading" constant="8" id="cio-AU-GVN"/>
-                                                <constraint firstItem="y4j-c6-J3I" firstAttribute="top" secondItem="Fbi-c5-OQf" secondAttribute="top" constant="8" id="k1x-PV-hwu"/>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="IQT-az-37p" secondAttribute="bottom" constant="8" id="lq8-7D-Ifv"/>
-                                                <constraint firstItem="IQT-az-37p" firstAttribute="top" secondItem="y4j-c6-J3I" secondAttribute="bottom" constant="8" id="mgd-4A-I8x"/>
+                                                <constraint firstItem="IQT-az-37p" firstAttribute="top" secondItem="Fbi-c5-OQf" secondAttribute="top" constant="8" id="hLS-DY-rcY"/>
+                                                <constraint firstItem="y4j-c6-J3I" firstAttribute="top" secondItem="IQT-az-37p" secondAttribute="bottom" constant="8" id="ktn-6z-uVg"/>
+                                                <constraint firstAttribute="trailing" secondItem="y4j-c6-J3I" secondAttribute="trailing" constant="8" id="x99-qJ-jhG"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
                                         <connections>
                                             <outlet property="messageTextLabel" destination="y4j-c6-J3I" id="xFQ-b0-HaZ"/>
+                                            <outlet property="timeAgoLabel" destination="Nt1-Hu-5N7" id="mSI-89-QZd"/>
                                             <outlet property="userLabel" destination="IQT-az-37p" id="fLf-IW-Juw"/>
                                         </connections>
                                     </tableViewCell>
@@ -154,7 +166,7 @@
                             </tableView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="iky-Sd-FFK" secondAttribute="trailing" id="Ayd-mv-7k6"/>
                             <constraint firstAttribute="trailing" secondItem="eib-iY-x2A" secondAttribute="trailing" constant="8" id="FHa-Nc-RlB"/>

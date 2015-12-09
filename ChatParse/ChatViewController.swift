@@ -17,7 +17,8 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.estimatedRowHeight = 50
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 30
 
         NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "fetchMessages", userInfo: nil, repeats: true)
     }
@@ -63,13 +64,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("messageCell") as! MessageCell
-        let message = messages[indexPath.row]
-        cell.messageTextLabel.text = message["text"] as? String
-        if let user = message["user"] as? PFUser {
-            cell.userLabel.text = user.username
-        } else {
-            cell.userLabel.text = "<ghost>"
-        }
+        cell.message = messages[indexPath.row]
         return cell
     }
 }
