@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // ParseCrashReporting.enable()
     //
     // Uncomment and fill in with your Parse credentials:
-    Parse.setApplicationId("qGxUAAQM3JFugLV9P0iMCXYzClVc9RgWsEeYaZQY", clientKey: "lx1nB7k1Xkc5oKoCJg1b3opMPI5uImznZVvXINMc")
+    Parse.setApplicationId("ILm5x6lQVNsiTWCBrOSaTQqSGOi8sZtb65P66n7o", clientKey: "6kQ1iniZpfexfhTn771Xi3eh9UTrmGxSoKyUEsYu")
     //
     // If you are using Facebook, uncomment and add your FacebookAppID to your bundle's plist as
     // described here: https://developers.facebook.com/docs/getting-started/facebook-sdk-for-ios/
@@ -63,98 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       }
     }
 
-    //
-    //  Swift 2.0
-    //
-    //        if #available(iOS 8.0, *) {
-    //            let types: UIUserNotificationType = [.Alert, .Badge, .Sound]
-    //            let settings = UIUserNotificationSettings(forTypes: types, categories: nil)
-    //            application.registerUserNotificationSettings(settings)
-    //            application.registerForRemoteNotifications()
-    //        } else {
-    //            let types: UIRemoteNotificationType = [.Alert, .Badge, .Sound]
-    //            application.registerForRemoteNotificationTypes(types)
-    //        }
-
     return true
   }
-
-  func applicationWillResignActive(application: UIApplication) {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-  }
-
-  func applicationDidEnterBackground(application: UIApplication) {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-  }
-
-  func applicationWillEnterForeground(application: UIApplication) {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-  }
-
-  func applicationDidBecomeActive(application: UIApplication) {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-  }
-
-  func applicationWillTerminate(application: UIApplication) {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-  }
-
-  //--------------------------------------
-  // MARK: Push Notifications
-  //--------------------------------------
-  // Uncomment if you want to use Push Notifications
-  // You need to read up https://parse.com/docs/ios/guide#push-notifications first
-
-  //  func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
-  //    let installation = PFInstallation.currentInstallation()
-  //    installation.setDeviceTokenFromData(deviceToken)
-  //    installation.saveInBackground()
-  //
-  //    PFPush.subscribeToChannelInBackground("") { (succeeded: Bool, error: NSError?) in
-  //      if succeeded {
-  //        print("ParseStarterProject successfully subscribed to push notifications on the broadcast channel.\n");
-  //      } else {
-  //        print("ParseStarterProject failed to subscribe to push notifications on the broadcast channel with error = %@.\n", error)
-  //      }
-  //    }
-  //  }
-  //
-  //  func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
-  //    if error.code == 3010 {
-  //      print("Push notifications are not supported in the iOS Simulator.\n")
-  //    } else {
-  //      print("application:didFailToRegisterForRemoteNotificationsWithError: %@\n", error)
-  //    }
-  //  }
-  //
-  //  func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
-  //    PFPush.handlePush(userInfo)
-  //    if application.applicationState == UIApplicationState.Inactive {
-  //      PFAnalytics.trackAppOpenedWithRemoteNotificationPayload(userInfo)
-  //    }
-  //  }
-
-  ///////////////////////////////////////////////////////////
-  // Uncomment this method if you want to use Push Notifications with Background App Refresh
-  ///////////////////////////////////////////////////////////
-  // func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
-  //     if application.applicationState == UIApplicationState.Inactive {
-  //         PFAnalytics.trackAppOpenedWithRemoteNotificationPayload(userInfo)
-  //     }
-  // }
-
-  //--------------------------------------
-  // MARK: Facebook SDK Integration
-  //--------------------------------------
-
-  ///////////////////////////////////////////////////////////
-  // Uncomment this method if you are using Facebook
-  ///////////////////////////////////////////////////////////
-  // func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
-  //     return FBAppCall.handleOpenURL(url, sourceApplication:sourceApplication, session:PFFacebookUtils.session())
-  // }
-
 }
 
