@@ -7,10 +7,19 @@
 //
 
 import UIKit
+import Parse
 
 class MessageCell: UITableViewCell {
     @IBOutlet weak var messageTextLabel: UILabel!
     @IBOutlet weak var userLabel: UILabel!
+
+    var message: PFObject! {
+        didSet {
+            messageTextLabel.text = message["text"] as? String
+            let user = message["user"] as? PFUser
+            userLabel.text = user?.username ?? "<ghost>"
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

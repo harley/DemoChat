@@ -11,14 +11,12 @@ import Parse
 
 class ChatViewController: UIViewController {
     var messages = [PFObject]()
-
     @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.estimatedRowHeight = 50
-
         NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "fetchMessages", userInfo: nil, repeats: true)
     }
 
@@ -32,7 +30,6 @@ class ChatViewController: UIViewController {
                 print("Error fetching messages", error!.description)
                 return
             }
-
             self.messages = messages
             self.tableView.reloadData()
         }
@@ -47,10 +44,8 @@ class ChatViewController: UIViewController {
         message.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             guard success == true else {
                 print("Failed: ", error!.description)
-                // TODO: display alert message
                 return
             }
-
             self.composeTextField.text = ""
         }
     }
@@ -63,13 +58,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("messageCell") as! MessageCell
-        let message = messages[indexPath.row]
-        cell.messageTextLabel.text = message["text"] as? String
-        if let user = message["user"] as? PFUser {
-            cell.userLabel.text = user.username
-        } else {
-            cell.userLabel.text = "<ghost>"
-        }
+        cell.message = messages[indexPath.row]
         return cell
     }
 }

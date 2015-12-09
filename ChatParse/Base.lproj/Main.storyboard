@@ -103,41 +103,41 @@
                                     <action selector="onSendButtonTapped:" destination="8nQ-9X-TyV" eventType="touchUpInside" id="up8-IP-7uK"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iky-Sd-FFK">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iky-Sd-FFK">
                                 <rect key="frame" x="0.0" y="66" width="320" height="502"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="messageCell" rowHeight="106" id="rRa-mg-b5r" customClass="MessageCell" customModule="ChatParse" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="106"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="messageCell" rowHeight="80" id="rRa-mg-b5r" customClass="MessageCell" customModule="ChatParse" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rRa-mg-b5r" id="Fbi-c5-OQf">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="105.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4j-c6-J3I">
-                                                    <rect key="frame" x="8" y="8" width="304" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQT-az-37p">
+                                                    <rect key="frame" x="8" y="8" width="33" height="17"/>
                                                     <animations/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQT-az-37p">
-                                                    <rect key="frame" x="275" y="36" width="36.5" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This can be a multi-line chat message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4j-c6-J3I">
+                                                    <rect key="frame" x="8" y="33" width="304" height="38.5"/>
                                                     <animations/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <animations/>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="IQT-az-37p" secondAttribute="trailing" constant="8" id="Wkg-pK-tGj"/>
-                                                <constraint firstAttribute="trailing" secondItem="y4j-c6-J3I" secondAttribute="trailing" constant="8" id="bhP-Jj-DPy"/>
-                                                <constraint firstItem="y4j-c6-J3I" firstAttribute="leading" secondItem="Fbi-c5-OQf" secondAttribute="leading" constant="8" id="cio-AU-GVN"/>
-                                                <constraint firstItem="y4j-c6-J3I" firstAttribute="top" secondItem="Fbi-c5-OQf" secondAttribute="top" constant="8" id="k1x-PV-hwu"/>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="IQT-az-37p" secondAttribute="bottom" constant="8" id="lq8-7D-Ifv"/>
-                                                <constraint firstItem="IQT-az-37p" firstAttribute="top" secondItem="y4j-c6-J3I" secondAttribute="bottom" constant="8" id="mgd-4A-I8x"/>
+                                                <constraint firstItem="y4j-c6-J3I" firstAttribute="top" secondItem="IQT-az-37p" secondAttribute="bottom" constant="8" id="8St-SY-iHM"/>
+                                                <constraint firstItem="IQT-az-37p" firstAttribute="top" secondItem="Fbi-c5-OQf" secondAttribute="top" constant="8" id="IiO-lu-fbN"/>
+                                                <constraint firstAttribute="bottom" secondItem="y4j-c6-J3I" secondAttribute="bottom" constant="8" id="L7Z-sZ-0cW"/>
+                                                <constraint firstAttribute="trailing" secondItem="y4j-c6-J3I" secondAttribute="trailing" constant="8" id="bdw-yC-1Db"/>
+                                                <constraint firstItem="y4j-c6-J3I" firstAttribute="leading" secondItem="Fbi-c5-OQf" secondAttribute="leading" constant="8" id="d0E-WV-abH"/>
+                                                <constraint firstItem="IQT-az-37p" firstAttribute="leading" secondItem="Fbi-c5-OQf" secondAttribute="leading" constant="8" id="dD3-Pf-cxv"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
@@ -154,7 +154,7 @@
                             </tableView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="iky-Sd-FFK" secondAttribute="trailing" id="Ayd-mv-7k6"/>
                             <constraint firstAttribute="trailing" secondItem="eib-iY-x2A" secondAttribute="trailing" constant="8" id="FHa-Nc-RlB"/>
