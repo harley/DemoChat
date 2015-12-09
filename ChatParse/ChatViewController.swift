@@ -55,6 +55,11 @@ class ChatViewController: UIViewController {
             self.composeTextField.text = ""
         }
     }
+
+
+    @IBAction func onLogoutTapped(sender: UIBarButtonItem) {
+        PFUser.logOut()
+    }
 }
 
 extension ChatViewController: UITableViewDelegate, UITableViewDataSource {

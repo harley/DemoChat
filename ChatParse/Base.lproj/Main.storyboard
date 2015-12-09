@@ -70,14 +70,14 @@
                         <outlet property="loginButton" destination="vx6-bn-1jF" id="TVd-pi-8Pj"/>
                         <outlet property="passwordField" destination="zfD-2I-zHR" id="PhO-Hn-x5a"/>
                         <outlet property="signupButton" destination="RdR-Y8-ve2" id="qf2-vA-Klw"/>
-                        <segue destination="8nQ-9X-TyV" kind="modal" identifier="loggedInSegue" id="p6f-uQ-Vms"/>
+                        <segue destination="u0X-9N-qUG" kind="modal" identifier="loggedInSegue" id="p6f-uQ-Vms"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="106" y="329"/>
         </scene>
-        <!--Chat View Controller-->
+        <!--Chat-->
         <scene sceneID="PbO-cw-kiW">
             <objects>
                 <viewController id="8nQ-9X-TyV" customClass="ChatViewController" customModule="ChatParse" customModuleProvider="target" sceneMemberID="viewController">
@@ -90,13 +90,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5K7-ch-KJI">
-                                <rect key="frame" x="8" y="28" width="260" height="30"/>
+                                <rect key="frame" x="8" y="72" width="260" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eib-iY-x2A">
-                                <rect key="frame" x="276" y="28" width="36" height="30"/>
+                                <rect key="frame" x="276" y="72" width="36" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Send"/>
                                 <connections>
@@ -104,7 +104,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="76" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iky-Sd-FFK">
-                                <rect key="frame" x="0.0" y="66" width="320" height="502"/>
+                                <rect key="frame" x="0.0" y="110" width="320" height="458"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -179,6 +179,14 @@
                             <constraint firstItem="5K7-ch-KJI" firstAttribute="top" secondItem="a5m-ge-c7I" secondAttribute="bottom" constant="8" id="fkr-64-Usy"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Chat" id="7u5-g9-8lM">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="6i9-YW-gZm">
+                            <connections>
+                                <action selector="onLogoutTapped:" destination="8nQ-9X-TyV" id="PBN-3E-4jC"/>
+                                <segue destination="BYZ-38-t0r" kind="modal" id="x2t-6I-Q3N"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="composeTextField" destination="5K7-ch-KJI" id="o8K-bm-7gD"/>
                         <outlet property="tableView" destination="iky-Sd-FFK" id="aIG-wg-KSm"/>
@@ -186,7 +194,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eC8-E2-gxR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="488" y="329"/>
+            <point key="canvasLocation" x="1020" y="329"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rMP-N8-w7w">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="u0X-9N-qUG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GMn-Kh-CNH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8nQ-9X-TyV" kind="relationship" relationship="rootViewController" id="oOu-xa-yyI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a5e-vb-2ar" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="556" y="329"/>
         </scene>
     </scenes>
 </document>
